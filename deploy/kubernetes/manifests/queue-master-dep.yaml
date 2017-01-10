@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: queue-master
-        image: weaveworksdemos/queue-master:0.3.0
+        image: weaveworksdemos/queue-master:ac26a1840ef3f65a7d5ce33ff37d31588e361298
         ports:
         - containerPort: 80
