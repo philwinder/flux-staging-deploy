@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: weaveworksdemos/front-end:4a8d493008998e2c7e0cc387c61a8525be81aa09
+        image: weaveworksdemos/front-end:master-7a630afe
         resources:
           requests:
             cpu: 100m
