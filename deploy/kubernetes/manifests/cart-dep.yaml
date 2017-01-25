@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: weaveworksdemos/cart:master-129ef150
+        image: weaveworksdemos/cart:84c7ae686eb153c6af9bf9d946c14aef45b330e7
         ports:
         - containerPort: 80
         securityContext:
