@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: weaveworksdemos/shipping:0.4.2
+        image: weaveworksdemos/shipping:118e50454f1d2e9a42f89d52a2b1c32afd831dae
         ports:
         - containerPort: 80
         securityContext:
