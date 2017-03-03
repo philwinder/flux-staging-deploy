@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: shipping
-        image: weaveworksdemos/shipping:0.4.3
+        image: weaveworksdemos/shipping:master-ed574c3d
         ports:
         - containerPort: 80
         securityContext:
