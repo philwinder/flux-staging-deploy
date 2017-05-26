@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: weaveworksdemos/front-end:red-buttons
+        image: weaveworksdemos/front-end:master-82ebb7c9
         resources:
           requests:
             cpu: 100m
