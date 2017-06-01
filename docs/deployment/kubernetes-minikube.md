@@ -32,7 +32,7 @@ Check if it's running with `minikube status`, and make sure the Kubernetes dashb
 Deploy the Sock Shop application on Minikube
 
 ```
-kubectl create -f deploy/kubernetes/manifests/sock-shop-ns.yml -f deploy/kubernetes/manifests
+kubectl create -f deploy/kubernetes/manifests/sock-shop-ns.yaml -f deploy/kubernetes/manifests
 ```
 
 Wait for all the Sock Shop services to start:
@@ -64,7 +64,7 @@ docker run --rm weaveworksdemos/load-test -d 5 -h 192.168.99.100:30001 -c 3 -r 1
 ### Uninstall the Sock Shop application
 
 ```
-kubectl delete -f deploy/kubernetes/manifests/sock-shop-ns.yml -f deploy/kubernetes/manifests
+kubectl delete -f deploy/kubernetes/manifests/sock-shop-ns.yaml -f deploy/kubernetes/manifests
 ```
 
 If you don't need the Minikube instance anymore you can delete it by running:
