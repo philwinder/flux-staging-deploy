@@ -2,16 +2,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cart
+  name: carts-db
   labels:
-    name: cart
-  annotations:
-    prometheus.io/path: "/prometheus"
+    name: carts-db
   namespace: sock-shop
 spec:
   ports:
     # the port that this service should serve on
-  - port: 80
-    targetPort: 80
+  - port: 27017
+    targetPort: 27017
   selector:
-    name: cart
+    name: carts-db
