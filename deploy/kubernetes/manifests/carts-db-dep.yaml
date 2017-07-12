@@ -2,30 +2,31 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: cart
+  name: carts-db
   labels:
-    name: cart
+    name: carts-db
   namespace: sock-shop
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
-        name: cart
+        name: carts-db
     spec:
       containers:
-      - name: cart
-        image: weaveworksdemos/cart:0.4.1
+      - name: carts-db
+        image: mongo
         ports:
-        - containerPort: 80
+        - name: mongo
+          containerPort: 27017
         securityContext:
-          runAsNonRoot: true
-          runAsUser: 10001
           capabilities:
             drop:
               - all
             add:
-              - NET_BIND_SERVICE
+              - CHOWN
+              - SETGID
+              - SETUID
           readOnlyRootFilesystem: true
         volumeMounts:
         - mountPath: /tmp
